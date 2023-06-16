@@ -23,12 +23,12 @@
     </div>
     @foreach($tiendas as $tienda)
     @if ($productos->tienda_id == $tienda->id)
-    <p><strong>Vendido por:</strong><a href="/tienda/{{$tienda->id}}">{{ $tienda->name }}</a></p>
+    <p><strong>Vendido por:</strong><a href="/tienda/{{$tienda->id}}" class="text-warning">{{ $tienda->name }}</a></p>
     @endif
     @endforeach
     @foreach($categorias as $categoria)
     @if ($productos->categoria_id == $categoria->id)
-    <p><strong>Categoria:</strong><a href="/categoria/{{$categoria->id}}">{{ $categoria->name }}</a></p>
+    <p><strong>Categoria:</strong><a href="/categoria/{{$categoria->id}}" class="text-warning">{{ $categoria->name }}</a></p>
     @endif
     @endforeach
 </div>

@@ -4,9 +4,9 @@
 
 <div class="container-fluid">
   <div class="row">
-  <div class="text-center">
-    <h1>{{$tiendas->name}}</h1>
-  </div>
+  <h1 class="mt-5 mb-3 text-center">
+        <a href="/categoria/{{$tiendas->id}}" class="text-warning ">{{$tiendas->name}}</a>
+      </h1>
   <div class="row">
     <div class="col-md-6 offset-md-3">
       <img src="{{$tiendas->logo}}" class="img-fluid" alt="Logo de la tienda">
