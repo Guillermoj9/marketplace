@@ -169,22 +169,22 @@
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 1">
+                      <img src="{{asset('img/ayuntamiento.png')}}" class="img-fluid" alt="Empresa 1" width="200px" height="200px">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 2">
+                      <img src="{{asset('img/ayuntamiento.png')}}" class="img-fluid" alt="Empresa 2"  width="200px" height="200px">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 3">
+                      <img src="{{asset('img/ayuntamiento.png')}}" class="img-fluid" alt="Empresa 3" width="200px" height="200px">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 4">
+                      <img src="{{asset('img/ayuntamiento.png')}}" class="img-fluid" alt="Empresa 4" width="200px" height="200px">
                     </div>
                   </div>
                 </div>
