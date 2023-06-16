@@ -7,17 +7,21 @@
 <div class="container-fluid">
   <div class="row">
     <div class="text-center">
-      <h1 class="mt-5 mb-3">{{$categorias->name}}</h1>
+      <h1 class="mt-5 mb-3">
+        <a href="/categoria/{{$categorias->id}}" class="text-warning">{{$categorias->name}}</a>
+      </h1>
+
+
     </div>
 
     <!-- BUSCAR Producto  -->
     <div class="container-fluid d-flex justify-content-center align-items-center mb-3">
-  <form class="form-inline mt-3" action="/categoria/buscarProductoCategoria/{{$categorias->id}}" method="post">
-    @csrf
-    <input name="name" class="form-control mr-sm-2" type="text" placeholder="Buscar producto" aria-label="Search">
-    <button class="btn btn-primary" type="submit">Buscar</button>
-  </form>
-</div>
+      <form class="form-inline mt-3" action="/categoria/buscarProductoCategoria/{{$categorias->id}}" method="post">
+        @csrf
+        <input name="name" class="form-control mr-sm-2" type="text" placeholder="Buscar producto" aria-label="Search">
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+    </div>
 
 
     @foreach($productos as $producto)

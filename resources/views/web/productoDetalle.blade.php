@@ -28,7 +28,7 @@
     @endforeach
     @foreach($categorias as $categoria)
     @if ($productos->categoria_id == $categoria->id)
-    <p><strong>Categoria:</strong>{{ $categoria->name }}</p>
+    <p><strong>Categoria:</strong><a href="/categoria/{{$categoria->id}}">{{ $categoria->name }}</a></p>
     @endif
     @endforeach
 </div>

@@ -71,6 +71,7 @@ Route::middleware(['auth', 'rol:admin'])->group(function () {
     Route::get('admin/crearCategoria/', [categoriasController::class, 'crearCategoria']);
     Route::post('admin/guardarCategoria/', [categoriasController::class, 'store']);
     Route::get('/admin/{categoria}/categoriaDestroy', [categoriasController::class, 'categoriaDestroy']);
+    Route::post('/admin/{categoria}/modificarCategoria', [categoriasController::class, 'modificarCategoria']);
 
     /*-----------------FIN CREAR CATEGORIAS Y GUARDAR----------------*/
     /*-----------------VISTA CREAR TIENDAS Y GUARDAR, BORRAR----------------*/
@@ -78,6 +79,7 @@ Route::middleware(['auth', 'rol:admin'])->group(function () {
     Route::get('admin/crearTienda/', [tiendasController::class, 'crearTienda']);
     Route::post('admin/guardarTienda/', [tiendasController::class, 'store']);
     Route::get('/admin/{tienda}/tiendaDestroy', [tiendasController::class, 'tiendaDestroy']);
+    Route::post('/admin/{tienda}/modificarTienda', [tiendasController::class, 'modificarTienda']);
     /*-----------------FIN CREAR CATEGORIAS Y GUARDAR----------------*/
 });
 

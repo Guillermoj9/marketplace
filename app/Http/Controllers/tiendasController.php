@@ -70,7 +70,19 @@ class tiendasController extends Controller
         //
     }
 
-    
+    public function modificarTienda(Request $request, Tienda $tienda)
+    {
+        $UpdateTienda = Tienda::find($tienda->id);
+        $UpdateTienda->name = $request->input('nombre');
+        $UpdateTienda->phone = $request->input('tlf');
+        $UpdateTienda->email = $request->input('email');
+        $UpdateTienda->address = $request->input('address');
+        $UpdateTienda->description = $request->input('description');
+
+        $UpdateTienda->save();
+
+        return view('admin.todasTiendas', ['productos' => Producto::all(), 'tiendas' => Tienda::all(), 'categorias' => Categoria::all()]);
+    }
 
     /**
      * Display the specified resource.
