@@ -63,6 +63,7 @@ Route::middleware(['auth', 'rol:admin'])->group(function () {
     Route::post('admin/guardarProducto/', [productosController::class, 'store']);
     Route::get('/admin/{producto}/destroy', [productosController::class, 'destroy']);
     Route::post('/admin/buscarProducto', [productosController::class, 'buscarProductoAdmin']);
+    Route::post('/admin/{producto}/modificarProducto', [productosController::class, 'modificarProducto']);
 
     /*-----------------FIN VISTA CREAR PRODUCTO Y GUARDAR----------------*/
     /*-----------------VISTA CREAR CATEGORIAS Y GUARDAR, BORRAR----------------*/

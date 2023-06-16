@@ -15,18 +15,19 @@
 
 <div class="container-fluid">
   <div class="row">
-    <form class="form-inline mb-3" action="/admin/buscarProducto" method="post">
-      @csrf
-      @foreach($productos as $producto)
 
-      <div class="col-md-3 col-6 mb-4">
+    @foreach($productos as $producto)
+
+    <div class="col-md-3 col-6 mb-4">
+      <form class="form-inblock mb-3" action="/admin/{{$producto->id}}/modificarProducto" method="post">
+        @csrf
         <div class="card">
           <div class="card-body">
             <a><img class="card-img-top" src="{{ asset($producto->img) }}" alt="Card image cap"></a>
             <!-- Nombre  -->
             <div class="d-flex align-items-center">
               <strong class="me-2">Nombre:</strong>
-              <input class="form-control mt-2" type="text" value="{{ $producto->name }}">
+              <input class="form-control mt-2" type="text" name="nombre" value="{{ $producto->name }}">
             </div>
             <!-- Tienda  -->
 
@@ -51,21 +52,26 @@
             <!-- Precio  -->
             <div class="d-flex align-items-center">
               <strong class="me-2">Price:</strong>
-              <input class="form-control mt-2" type="text" value="{{ $producto->price }}€">
+              <input class="form-control mt-2" type="text" name="precio" value="{{ $producto->price }}€">
             </div>
 
 
             <!-- ACCIONES  -->
             <p class="btn-holder mt-3">
-              <a href="/admin/modificarProducto" class="btn btn-outline-warning d-inline-block mr-3"><i class="bi bi-arrow-clockwise"></i></a>
+              <button class="btn btn-outline-warning d-inline-block" type="submit"> <i class="bi bi-arrow-clockwise"></i></button>
               <a href="/admin/{{ $producto->id }}/destroy" class="btn btn-outline-danger d-inline-block"><i class="bi bi-trash"></i></a>
             </p>
 
 
+
           </div>
         </div>
-      </div>
-      @endforeach
+        </form>
+    </div>
+    
+    @endforeach
   </div>
+</div>
 
-  @endsection
+
+@endsection

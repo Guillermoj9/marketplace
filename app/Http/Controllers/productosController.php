@@ -37,7 +37,7 @@ class productosController extends Controller
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product has been added to cart!');
     }
-/*
+    /*
     public function updateCart(Request $request)
 {
     if ($request->id) {
@@ -54,41 +54,41 @@ class productosController extends Controller
     }
 }
 */
-public function updateProduct(Request $request)
-{
-    if ($request->id) {
-        $cart = session()->get('cart');
-        
-        if (isset($cart[$request->id])) {
-            // Incrementa la cantidad del producto en 1
-            $cart[$request->id]['quantity']++;
+    public function updateProduct(Request $request)
+    {
+        if ($request->id) {
+            $cart = session()->get('cart');
 
-            session()->put('cart', $cart);
-        }
-        
-        session()->flash('success', 'Producto agregado.');
-    }
-}
-    public function deleteProduct(Request $request)
-{
-    if ($request->id) {
-        $cart = session()->get('cart');
-        
-        if (isset($cart[$request->id])) {
-            // Disminuye la cantidad del producto en 1
-            $cart[$request->id]['quantity']--;
+            if (isset($cart[$request->id])) {
+                // Incrementa la cantidad del producto en 1
+                $cart[$request->id]['quantity']++;
 
-            // Si la cantidad llega a 0, elimina el producto del carrito
-            if ($cart[$request->id]['quantity'] <= 0) {
-                unset($cart[$request->id]);
+                session()->put('cart', $cart);
             }
 
-            session()->put('cart', $cart);
+            session()->flash('success', 'Producto agregado.');
         }
-        
-        session()->flash('success', 'Product quantity updated.');
     }
-}
+    public function deleteProduct(Request $request)
+    {
+        if ($request->id) {
+            $cart = session()->get('cart');
+
+            if (isset($cart[$request->id])) {
+                // Disminuye la cantidad del producto en 1
+                $cart[$request->id]['quantity']--;
+
+                // Si la cantidad llega a 0, elimina el producto del carrito
+                if ($cart[$request->id]['quantity'] <= 0) {
+                    unset($cart[$request->id]);
+                }
+
+                session()->put('cart', $cart);
+            }
+
+            session()->flash('success', 'Product quantity updated.');
+        }
+    }
     /**
      * Display a listing of the resource.
      */
@@ -99,7 +99,7 @@ public function updateProduct(Request $request)
     }
     public function productoDetalle(Producto $producto)
     {
-        return view('web.productoDetalle', ['productos' => $producto, 'categorias' => Categoria::all(),'tiendas'=>Tienda::all()]);
+        return view('web.productoDetalle', ['productos' => $producto, 'categorias' => Categoria::all(), 'tiendas' => Tienda::all()]);
     }
 
     //VISTA PRINCIPAL DEL ADMIN
@@ -114,8 +114,8 @@ public function updateProduct(Request $request)
 
     public function buscarProductoAdmin(Request $request)
     {
-        $buscarPro = Producto::where('name','like','%'.$request->input('name').'%')->get();
-        return view('admin.admin', ['productos' => $buscarPro, 'categorias' => categoria::all(),'tiendas'=>Tienda::all()]);
+        $buscarPro = Producto::where('name', 'like', '%' . $request->input('name') . '%')->get();
+        return view('admin.admin', ['productos' => $buscarPro, 'categorias' => categoria::all(), 'tiendas' => Tienda::all()]);
     }
     /**
      * Store a newly created resource in storage.
@@ -150,11 +150,11 @@ public function updateProduct(Request $request)
         //
     }
 
-//VISTA SI HACES LOGIN COMO USUARIO
-public function mostrarHome()
-{
-    return view('web.home', ['productos' => Producto::all(), 'categorias' => Categoria::all(),'tiendas' =>Tienda::all()]);
-}
+    //VISTA SI HACES LOGIN COMO USUARIO
+    public function mostrarHome()
+    {
+        return view('web.home', ['productos' => Producto::all(), 'categorias' => Categoria::all(), 'tiendas' => Tienda::all()]);
+    }
 
 
 
@@ -174,6 +174,19 @@ public function mostrarHome()
         //
     }
 
+    public function modificarProducto(Request $request, Producto $producto)
+    {
+        $Updateproducto = Producto::find($producto->id);
+        $Updateproducto->name = $request->input('nombre');
+        $Updateproducto->tienda_id = $request->input('tienda');
+        $Updateproducto->categoria_id = $request->input('categoria');
+        $Updateproducto->price = $request->input('precio');
+    
+
+        $Updateproducto->save();
+
+        return view('admin.admin', ['productos' => Producto::all(), 'tiendas' => Tienda::all(), 'categorias' => Categoria::all()]);
+    }
     /**
      * Update the specified resource in storage.
      */
@@ -188,7 +201,7 @@ public function mostrarHome()
     public function destroy(Producto $producto)
     {
         //
-        $producto -> delete();
+        $producto->delete();
         return view('admin.admin', ['productos' => Producto::all(), 'tiendas' => Tienda::all(), 'categorias' => Categoria::all()]);
     }
 }

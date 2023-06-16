@@ -10,13 +10,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{asset('storage/imagen1seccion.jpg')}}" class="d-block w-100" alt="" width="550px" height="500px">
+        <img src="{{asset('img/imagen1seccion.jpg')}}" class="d-block w-100" alt="" width="550px" height="500px">
       </div>
       <div class="carousel-item">
-        <img src="{{asset('storage/imagen2seccion.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
+        <img src="{{asset('img/imagen2seccion.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
       </div>
       <div class="carousel-item">
-        <img src="{{asset('storage/imagen3seccion.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
+        <img src="{{asset('img/imagen3seccion.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -54,21 +54,21 @@
   <div class="row">
     <div class="col-md-4">
       <div class="text-center">
-        <img src="{{ asset('storage/imagen1seccion.jpg') }}" alt="" class="rounded-circle img-fluid">
+        <img src="{{ asset('img/imagen1seccion.jpg') }}" alt="" class="rounded-circle img-fluid">
         <h4>Envío gratuito</h4>
         <p>Envíos gratuitos en pedidos superiores a 50€.</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="text-center">
-        <img src="{{ asset('storage/imagen2seccion.jpg') }}" alt="Imagen 2" class="rounded-circle img-fluid">
+        <img src="{{ asset('img/imagen2seccion.jpg') }}" alt="Imagen 2" class="rounded-circle img-fluid">
         <h4>Comercio seguro</h4>
         <p>Haz tus compras sin miedos.</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="text-center">
-        <img src="{{ asset('storage/imagen3seccion.jpg') }}" alt="Imagen 3" class="rounded-circle img-fluid">
+        <img src="{{ asset('img/imagen3seccion.jpg') }}" alt="Imagen 3" class="rounded-circle img-fluid">
         <h4>Compra en casa</h4>
         <p>Todos los productos son de comercios locales.</p>
       </div>
@@ -169,22 +169,22 @@
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" class="img-fluid" alt="Empresa 1">
+                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 1">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" class="img-fluid" alt="Empresa 2">
+                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 2">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" class="img-fluid" alt="Empresa 3">
+                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 3">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="company-slide">
-                      <img src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" class="img-fluid" alt="Empresa 4">
+                      <img src="{{asset('img/imagen1seccion.jpg')}}" class="img-fluid" alt="Empresa 4">
                     </div>
                   </div>
                 </div>
