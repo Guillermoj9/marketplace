@@ -10,14 +10,15 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{asset('img/imagen1seccion.jpg')}}" class="d-block w-100" alt="" width="550px" height="500px">
+        <img src="{{asset('img/slider-1.jpg')}}" class="d-block w-100" alt="" width="550px" height="500px">
+        Image by <a href="https://pixabay.com/users/tumisu-148124/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4275963">Tumisu</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4275963">Pixabay</a>
       </div>
       <div class="carousel-item">
-        <img src="{{asset('img/imagen2seccion.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
-      </div>
+        <img src="{{asset('img/slider-2.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
+        <a href="https://www.freepik.com/free-photo/purchasing-shop-buying-selling-teade_18138201.htm#query=slider%20market&position=6&from_view=search&track=ais">Image by rawpixel.com</a> on Freepik      </div>
       <div class="carousel-item">
-        <img src="{{asset('img/imagen3seccion.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
-      </div>
+        <img src="{{asset('img/slider-3.jpg')}}" class="d-block w-100" alt="250px" width="550px" height="500px">
+        Image by <a href="https://pixabay.com/users/anncapictures-1564471/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1426008">annca</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1426008">Pixabay</a>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
