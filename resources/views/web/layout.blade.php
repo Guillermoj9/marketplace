@@ -47,11 +47,14 @@
                                 Categorias
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{ url('/categoria/1') }}">ROPA</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/categoria/2') }}">ALIMENTACION</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/categoria/3') }}">JOYERIA</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/categoria/5') }}">ELECTRONICA</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/2') }}">MONTAÑA</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/3') }}">HOGAR</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/4') }}">PARAFARMACIA</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/5') }}">DEPORTE</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/6') }}">MODA</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/7') }}">FERRETERIA</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/8') }}">ALIMENTOS</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/categoria/9') }}">ELECTRODOMESTICOS</a></li>
                                 <hr class="dropdown-divider">
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
