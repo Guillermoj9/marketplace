@@ -103,7 +103,7 @@
       <div class="card">
         <div class="card-body">
           <a href="/productoD/{{$producto->id}}">
-            <img class="card-img-top imag-fluid" src="{{ asset($producto->img) }}" alt="Card image cap"></a>
+            <img class="card-img-top imag-fluid mb-2" src="{{ asset($producto->img) }}" alt="Card image cap"></a>
           <h4 class="card-title">{{ $producto->name }}</h4>
           <p>{{ $producto->description }}</p>
           <p class="card-text"><strong>Price: </strong> {{ $producto->price }}€</p>
