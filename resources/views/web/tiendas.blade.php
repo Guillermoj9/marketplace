@@ -9,7 +9,7 @@
       </h1>
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <img src="{{$tiendas->logo}}" class="img-fluid" alt="Logo de la tienda">
+      <img src="{{ asset($tiendas->logo) }}" class="img-fluid" alt="Logo de la tienda">
     </div>
   </div>
   <div class="row">

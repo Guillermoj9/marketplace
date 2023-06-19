@@ -38,12 +38,13 @@
               <strong class="me-2">Descripcion:</strong>
               <input class="form-control mt-2" type="text" name="description" value="{{ $tienda->description }}">
             </div>
-        </div>
-      </div>
-      <p class="btn-holder mt-3">
+            <p class="btn-holder mt-3">
       <button class="btn btn-outline-warning d-inline-block mr-3" type="submit"> <i class="bi bi-arrow-clockwise"></i></button>
       <a href="/admin/{{ $tienda ->id }}/tiendaDestroy"" class=" btn btn-outline-danger"><i class="bi bi-trash"></i></a>
     </p>
+          </div>
+      </div>
+      
     </form>
     </div>
     @endforeach

@@ -129,12 +129,15 @@
 
 
     <!--Tiendas -->
+    @php
+    $tiendasHome = $tiendas->take(4);
+    @endphp
     <div class="container-fluid">
       <div class="row">
         <div class="text-center mt-4 mb-4">
           <h1>Tiendas</h1>
         </div>
-        @foreach($tiendas as $tienda)
+        @foreach($tiendasHome as $tienda)
         <div class="col-md-3 col-6 mb-4">
           <div class="card">
             <a href="/tienda/{{$tienda->id}}"> <img class="card-img-top" src="{{ asset($tienda->logo) }}" alt="Card image cap"> </a>
