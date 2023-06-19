@@ -42,11 +42,13 @@
         <h1>Categorías</h1>
       </div>
     </div>
-    <!--USA LAS 8 PRIMERAS CATEGORIAS NADA MAS  -->
+    <!-- USA LAS 8 PRIMERAS CATEGORIAS NADA MAS -->
     @foreach($categorias->take(8) as $categoria)
     <div class="col-md-3 col-6 mb-4">
       <div class="card">
-        <a href="/categoria/{{$categoria->id}}"> <img class="card-img-top" src="{{ asset($categoria->img) }}" alt="Card image cap"> </a>
+        <a href="/categoria/{{$categoria->id}}">
+          <img class="card-img-top img-fluid" src="{{ asset($categoria->img) }}" alt="Card image cap" style="height: 200px; object-fit: cover;">
+        </a>
         <div class="card-body">
           <h5 class="card-title">{{$categoria->name}}</h5>
         </div>
@@ -55,7 +57,11 @@
     @endforeach
   </div>
 </div>
+
 <!--seccion -->
+<div class="text-center mt-4 mb-4">
+      <h1>Apostamos por ti</h1>
+    </div>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
@@ -96,7 +102,8 @@
     <div class="col-md-3 col-6 mb-4">
       <div class="card">
         <div class="card-body">
-          <a href="/productoD/{{$producto->id}}"><img class="card-img-top" src="{{ asset($producto->img) }}" alt="Card image cap"></a>
+          <a href="/productoD/{{$producto->id}}">
+            <img class="card-img-top imag-fluid" src="{{ asset($producto->img) }}" alt="Card image cap"></a>
           <h4 class="card-title">{{ $producto->name }}</h4>
           <p>{{ $producto->description }}</p>
           <p class="card-text"><strong>Price: </strong> {{ $producto->price }}€</p>
@@ -136,22 +143,25 @@
 
     <!--Tiendas -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="text-center mt-4 mb-4">
-          <h1>Tiendas</h1>
+  <div class="row">
+    <div class="text-center mt-4 mb-4">
+      <h1>Tiendas</h1>
+    </div>
+    @foreach($tiendas->take(4) as $tienda)
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card">
+        <a href="/tienda/{{$tienda->id}}">
+          <img class="card-img-top img-fluid" src="{{ asset($tienda->logo) }}" alt="Card image cap" style="height: 200px; object-fit: cover;">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{$tienda->name}}</h5>
         </div>
-        @foreach($tiendas->take(4) as $tienda)
-        <div class="col-md-3 col-6 mb-4">
-          <div class="card">
-            <a href="/tienda/{{$tienda->id}}"> <img class="card-img-top" src="{{ asset($tienda->logo) }}" alt="Card image cap"> </a>
-            <div class="card-body">
-              <h5 class="card-title">{{$tienda->name}}</h5>
-            </div>
-          </div>
-        </div>
-        @endforeach
       </div>
     </div>
+    @endforeach
+  </div>
+</div>
+
     <style>
       .company-slide {
         text-align: center;
