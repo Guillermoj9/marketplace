@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 </head>
 <style>
     header,
@@ -64,9 +65,11 @@
                                 Tiendas
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{ url('/tienda/3') }}">DEPORTES MANOLO</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/tienda/4') }}">ELECTRO</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/tienda/5') }}">FRUTERIAPAKI</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/tienda/2') }}">FerreteriaManolo</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/tienda/3') }}">MerkateUnMueble</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/tienda/4') }}">Farmarcia La Milagrosa</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/tienda/5') }}">AltaAltitud</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/tienda/6') }}">Supermercado Naranjito</a></li>
 
                             </ul>
                         </li>
@@ -155,6 +158,7 @@
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
                 </ul>
+               
             </div>
 
             <div class="col-md-5 offset-md-1 mb-3">
@@ -169,7 +173,7 @@
                 </form>
             </div>
         </div>
-
+        
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <p>&copy; 2023 Company, Inc. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
