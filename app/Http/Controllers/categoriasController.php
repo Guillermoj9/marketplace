@@ -18,6 +18,17 @@ class categoriasController extends Controller
         return view('web.productosCategoria', ['productos' => Producto::all(), 'categorias' => $categoria, 'tiendas' => Tienda::all()]);
     }
     /**
+     * Buscar producto por nombre dentro de categoria
+     */
+    public function buscarProductoCategoria(Request $request, Categoria $categoria)
+    {
+        $buscarPro = Producto::where('name', 'like', '%' . $request->input('name') . '%')->get();
+        return view('web.productosCategoria', ['productos' => $buscarPro, 'categorias' => $categoria, 'tiendas' => Tienda::all()]);
+    }
+    /**
+     * ADMIN
+     */
+    /**
      * Vista de todas las categorias para admin
      */
     public function todasCategorias()
@@ -28,20 +39,15 @@ class categoriasController extends Controller
     {
         //
     }
-
     /**
-     * Show the form for creating a new resource.
+     * Crear categoria
      */
-    public function create()
-    {
-        //
-    }
     public function crearCategoria()
     {
         return view('admin.crearCategoria', ['productos' => Producto::all(), 'tiendas' => Tienda::all(), 'categorias' => Categoria::all()]);
     }
     /**
-     * Store a newly created resource in storage.
+     * Guardar una nueva categoria 
      */
     public function store(Request $request)
     {
@@ -59,6 +65,9 @@ class categoriasController extends Controller
         $categoria->save();
         return view('admin.todasCategorias', ['productos' => Producto::all(), 'categorias' => Categoria::all(), 'tiendas' => Tienda::all()]);
     }
+    /**
+     * MODIFICAR CATEGORIA
+     */
     public function modificarCategoria(Request $request, Categoria $categoria)
     {
         $Updatecateogria = Categoria::find($categoria->id);
@@ -75,11 +84,7 @@ class categoriasController extends Controller
     {
         //
     }
-    public function buscarProductoCategoria(Request $request, Categoria $categoria)
-    {
-        $buscarPro = Producto::where('name', 'like', '%' . $request->input('name') . '%')->get();
-        return view('web.productosCategoria', ['productos' => $buscarPro, 'categorias' => $categoria, 'tiendas' => Tienda::all()]);
-    }
+
     /**
      * Show the form for editing the specified resource.
      */

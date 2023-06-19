@@ -78,8 +78,8 @@
                             </i> Cart <span class="badge text-warning">{{ count((array) session('cart')) }}</span>
                         </a>
                     </div>
-
                     <!---------------------------FIN CARRITO------------------------------>
+
                     <!---------------------------LOGIN Y REGISTER------------------------------>
                     <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                         @if (Route::has('login'))
@@ -106,6 +106,7 @@
 
 <body>
     <main id="main">
+        <!--PARA QUE SALGA LA ALERTAR CUANDO AÑADES AL CARRITO -->
         @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}

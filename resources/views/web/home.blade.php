@@ -2,6 +2,8 @@
 
 @section('main')
 <div class="container-fluid">
+  <!--SLIDER DE 3 IMAGENES -->
+  <div class="d-none d-md-block">
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -30,6 +32,8 @@
     </button>
   </div>
 </div>
+</div>
+</div>
 <!--CATEGORIAS -->
 <div class="container-fluid">
   <div class="row">
@@ -38,6 +42,7 @@
         <h1>Categorías</h1>
       </div>
     </div>
+    <!--USA LAS 8 PRIMERAS CATEGORIAS NADA MAS  -->
     @foreach($categorias->take(8) as $categoria)
     <div class="col-md-3 col-6 mb-4">
       <div class="card">
@@ -77,7 +82,7 @@
   </div>
 </div>
 
-<!--PRODUCTOS -->
+<!--PRODUCTOS recoge 4 y cada vez que recargas salen 4 diferentes -->
 <div class="container-fluid">
   <div class="row">
     <div class="text-center mt-4 mb-4">
@@ -103,7 +108,7 @@
     </div>
     @endforeach
 
-    <!--Seccion -->
+    <!--Recoge 1 producto aleatorio y lo pinta-->
     @php
     $randomProductos = $productos->shuffle()->take(1);
     @endphp
@@ -130,15 +135,12 @@
 
 
     <!--Tiendas -->
-    @php
-    $tiendasHome = $tiendas->take(4);
-    @endphp
     <div class="container-fluid">
       <div class="row">
         <div class="text-center mt-4 mb-4">
           <h1>Tiendas</h1>
         </div>
-        @foreach($tiendasHome as $tienda)
+        @foreach($tiendas->take(4) as $tienda)
         <div class="col-md-3 col-6 mb-4">
           <div class="card">
             <a href="/tienda/{{$tienda->id}}"> <img class="card-img-top" src="{{ asset($tienda->logo) }}" alt="Card image cap"> </a>

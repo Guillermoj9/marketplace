@@ -32,7 +32,11 @@
           <img class="card-img-top" src="{{ asset($producto->img) }}" alt="Card image cap">
           <h4 class="card-title">{{ $producto->name }}</h4>
           <p>{{ $producto->description }}</p>
-          <p class="card-text"><strong>Tienda: </strong> {{ $producto->tienda_id}}</p>
+          @foreach($tiendas as $tienda)
+          @if ($producto->tienda_id == $tienda->id)
+          <p><strong>Vendido por: </strong><a href="/tienda/{{$tienda->id}}" class="text-warning">{{ $tienda->name }}</a></p>
+          @endif
+          @endforeach
           <p class="card-text"><strong>Price: </strong> {{ $producto->price }}€</p>
           <p class="btn-holder"><a href="{{ route('addProduct.to.cart', $producto->id) }}" class="btn btn-outline-warning mr-2">Add to cart</a>
             <a href="/productoD/{{$producto->id}}" class="btn btn-outline-success">Ver</a>
